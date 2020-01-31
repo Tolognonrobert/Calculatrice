@@ -6,28 +6,42 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-
+/*
+*-Initialisation des varariables *
+*/
   display = 0;
   memory = 0;
   state = 'number';
   operator = '+';
   decimal = false;
   decimals = 0;
-
+/* *
+*la function clickNumber qui prends en paramettre un nombre *
+*/
   clickNumber(n: number) {
     switch (this.state) {
+      /*
+      *Pour chaque nombre : on vérifie si c'est un nombre decimal .
+      *Si oui on incrémente decimals et on retourne display + le nombre * la puissance 
+      dont la base est 10 et l'expoant est le décimal incrémété.   
+      *Sinon on retourne display * 10 +le nombre   
+       */ 
       case 'number':
-        if (this.decimal) {
+        if (this.decimal) { 
           this.decimals++;
           this.display = this.display + n * Math.pow(10, -this.decimals);
         } else {
           this.display = this.display * 10 + n;
         }
         break;
+        /*
+        pour les operateur ,display prend le nombre
+        */
       case 'operator':
         this.display = n;
         this.state = 'number';
         break;
+
       case 'result':
         this.memory = 0;
         this.display = n;
@@ -63,7 +77,7 @@ export class Tab1Page {
     this.decimal = false;
     this.decimals = 0;
   }
-
+//reinitialisation des variables
   reset() {
     this.display = 0;
     this.memory = 0;
@@ -72,7 +86,7 @@ export class Tab1Page {
     this.decimal = false;
     this.decimals = 0;
   }
-
+// signe contraire de display
   changeSign() {
     this.display = this.display * -1;
   }

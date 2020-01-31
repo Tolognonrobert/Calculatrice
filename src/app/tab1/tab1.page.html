@@ -1,3 +1,4 @@
+<!-- l'entête de la page -->
 <ion-header>
   <ion-toolbar>
     <ion-title>
@@ -5,9 +6,9 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
+<!-- le contenu de la page -->
 <ion-content >
- 
+ <!-- l'ecran de la Calculatrice -->
     <ion-row>
       <ion-col size="12" >
         <ion-label class="display">
@@ -15,8 +16,9 @@
         </ion-label>
       </ion-col>
     </ion-row>
-  
+  <!-- la première ligne de la calculatrice-->
     <ion-row>
+    <!-- le bouton AC qui permet de réinitialiser la calculette-->
       <ion-col size="3">
         <ion-button
           (click)="reset()"
@@ -25,7 +27,7 @@
           AC
         </ion-button>
       </ion-col>
-     
+     <!-- le bouton (+/-) qui permet de changer le signe-->
       <ion-col size="3">
         <ion-button
           (click)="changeSign('+/-')"
@@ -35,7 +37,7 @@
           +/-
         </ion-button>
       </ion-col>
-
+     <!-- le bouton de la division-->
       <ion-col size="3">
         <ion-button
           size="small"
@@ -43,6 +45,7 @@
           %
         </ion-button>
       </ion-col>
+      <!--  le bouton de la division -->
       <ion-col size="3">
         <ion-button
           (click)="clickOperator('/')"
@@ -52,14 +55,16 @@
         </ion-button>
       </ion-col>
     </ion-row>
-  
+  <!-- la ligne 2 -->
     <ion-row>
+    <!-- le bouton 7-->
       <ion-col size="3">
         <ion-button
           (click)="clickNumber(7)"
           size="small"
           expand="full" shape="round" color="dark"  >7</ion-button>
       </ion-col>
+      <!-- le bouton 8-->
       <ion-col size="3">
         <ion-button
           (click)="clickNumber(8)"
@@ -67,7 +72,9 @@
           expand="full" shape="round" color="dark"  >
           8
         </ion-button>
+
       </ion-col>
+      <!-- le bouton 9-->
       <ion-col size="3">
         <ion-button
           (click)="clickNumber(9)"
@@ -76,6 +83,7 @@
           9
         </ion-button>
       </ion-col>
+      <!-- le bouton *-->
       <ion-col size="3">
         <ion-button
           (click)="clickOperator('*')"
@@ -85,8 +93,9 @@
         </ion-button>
       </ion-col>
     </ion-row>
-  
+  <!-- la ligne 3-->
     <ion-row>
+    <!-- le bouton 4-->
       <ion-col size="3">
         <ion-button
           (click)="clickNumber(4)"
@@ -95,6 +104,7 @@
           4
         </ion-button>
       </ion-col>
+      <!-- le bouton 5-->
       <ion-col size="3">
         <ion-button
           (click)="clickNumber(5)"
@@ -103,6 +113,7 @@
           5
         </ion-button>
       </ion-col>
+      <!-- le bouton 6-->
       <ion-col size="3">
         <ion-button
           (click)="clickNumber(6)"
@@ -120,8 +131,9 @@
         </ion-button>
       </ion-col>
     </ion-row>
-  
+  <!--la ligne 4-->
     <ion-row>
+    <!-- le bouton 1-->
       <ion-col size="3">
         <ion-button
           (click)="clickNumber(1)"
@@ -137,6 +149,7 @@
           expand="full" shape="round" color="dark"  >
           2
         </ion-button>
+        <!-- le bouton 3-->
       </ion-col>
       <ion-col size="3">
         <ion-button
@@ -146,6 +159,7 @@
           3
         </ion-button>
       </ion-col>
+      <!-- le bouton +-->
       <ion-col size="3">
         <ion-button
           (click)="clickOperator('+')"
@@ -155,10 +169,10 @@
         </ion-button>
       </ion-col>
     </ion-row>
-    
+    <!-- la ligne 5-->
     <ion-row>
 
-     
+     <!-- le bouton 0-->
      
       <ion-col size="6">
         <ion-button
@@ -168,6 +182,8 @@
           0
         </ion-button>
       </ion-col>
+      <!-- le bouton ,
+    (,)-->
       <ion-col size="3">
         <ion-button
           (click)="setDecimal()"
@@ -176,6 +192,7 @@
           ,
         </ion-button>
       </ion-col>
+      <!-- le bouton  = (resultat)-->
       <ion-col size="3">
         <ion-button
           (click)="calculate()"
@@ -190,3 +207,4 @@
   
 
 </ion-content>
+<!--fin du contenu-->
