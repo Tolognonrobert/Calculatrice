@@ -2,3 +2,24 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+ion-content {
+  background-color: black;
+}
+ion-button {
+  font-size: 1.6em;
+  width: 90% !important;
+  
+}
+
+.display {
+  font-size: 2.8em;
+  text-align: center;
+  color:black;
+  font-family: "deseg7";
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.warning{
+  background-color: darkorange;
+}
