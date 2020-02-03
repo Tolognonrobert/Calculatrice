@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class Tab1Page {
 /*
 *-Initialisation des varariables *
-*/
+*/d=0;
   display = 0;
   memory = 0;
   state = 'number';
@@ -90,7 +90,10 @@ export class Tab1Page {
   changeSign() {
     this.display = this.display * -1;
   }
-
+  /* modulo(){
+     this.d =  this.memory % this.display;
+     this.display = this.d;
+   }*/
   setDecimal() {
     this.decimal = true;
   }
